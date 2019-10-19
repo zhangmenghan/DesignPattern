@@ -6,5 +6,9 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="src/com/zmh/proxy/cglib/asm-commons.jar"/>
+	<classpathentry kind="lib" path="src/com/zmh/proxy/cglib/asm-tree.jar"/>
+	<classpathentry kind="lib" path="src/com/zmh/proxy/cglib/asm.jar"/>
+	<classpathentry kind="lib" path="src/com/zmh/proxy/cglib/cglib-2.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
