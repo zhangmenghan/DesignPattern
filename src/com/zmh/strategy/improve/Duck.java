@@ -7,6 +7,8 @@ public abstract class Duck {
 	//其它属性<->策略接口
 	QuackBehavior quackBehavior;
 	
+	SwimBehavior swimBehavior;
+	
 	public Duck() {
 	
 	}
@@ -14,18 +16,27 @@ public abstract class Duck {
 	public abstract void display();//显示鸭子信息
 	
 	public void quack() {
-		System.out.println("鸭子嘎嘎叫~~");
+		if(quackBehavior != null) {
+			quackBehavior.quack();
+		}else {
+			System.out.println("无参数");
+		}
 	}
 	
 	public void swim() {
-		System.out.println("鸭子会游泳~~");
+		if(swimBehavior != null) {
+			swimBehavior.swim();
+		}else {
+			System.out.println("无参数");
+		}
 	}
 	
 	public void fly() {
-		
 		//改进
 		if(flyBehavior != null) {
 			flyBehavior.fly();
+		}else {
+			System.out.println("无参数");
 		}
 	}
 
@@ -37,4 +48,9 @@ public abstract class Duck {
 	public void setQuackBehavior(QuackBehavior quackBehavior) {
 		this.quackBehavior = quackBehavior;
 	}
+
+	public void setSwimBehavior(SwimBehavior swimBehavior) {
+		this.swimBehavior = swimBehavior;
+	}
+	
 }
